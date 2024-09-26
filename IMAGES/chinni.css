@@ -1,0 +1,124 @@
+
+/*{
+    margin: 0%;
+    padding: 0%;
+}
+    
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: -o-linear-gradient(rgba(4,9,30,0.7)),(rgba(4,9,30,0.7));
+    background-position:center;
+    background-size: cover;
+    position: relative;
+}*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family : 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* BG*/
+body{
+    background: #080808;/* BG COLOUR*/
+    color: #fff;/* Text Color*/
+}
+
+/* Background Image*/
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Set Margin in left for 10px*/
+.container{
+    padding: 10px 10%;
+}
+
+/* header position*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 100px;
+}
+
+/* arranging header content in a line*/
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 28px;
+    text-align: center;
+}
+
+/* removing link colour to headers */
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    top: 40px;
+    position: relative; /* linked the position to hover */
+}
+
+/* hovering the headers*/
+/* Giving underline to headers*/
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.2s;
+}
+
+/* hover effect*/
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/* header text*/
+.header-text{
+    margin-top: -13%;
+    font-size: 30px;
+    font-weight: 50;
+    position: center;
+    padding-left: 20%;
+    font-style: italic;
+    padding-bottom: 10%;
+}
+
+.header-text h1{ /* h1 text*/
+    font-size: 60px;
+    margin-top: 20px;
+    font-style: normal;
+}
+
+.header-text p{ /* h1 text*/
+    font-size: 30px;
+    margin-top: 5px;
+    font-style: italic;
+    padding-left: 20%;
+    padding-bottom: 20%;
+}
+
+
+.header-text h1 span{
+    /* Name Colour*/
+    color: #ff004f;
+    display: inline-block;
+    opacity: 0;/*Header  Animation*/
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards;
+}
